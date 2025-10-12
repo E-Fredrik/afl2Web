@@ -1,0 +1,62 @@
+.bg-gradient {
+    background: linear-gradient(135deg, #f5e6d3 0%, #ffffff 100%);
+}
+
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2) !important;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1 !important;
+}
+
+.btn-hover {
+    transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+    background-color: #c19a6b !important;
+    transform: translateY(-2px);
+}
+
+[data-aos] {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+[data-aos-delay="0"] {
+    animation-delay: 0.1s;
+}
+[data-aos-delay="100"] {
+    animation-delay: 0.2s;
+}
+[data-aos-delay="200"] {
+    animation-delay: 0.3s;
+}
+[data-aos-delay="300"] {
+    animation-delay: 0.4s;
+}
+[data-aos-delay="400"] {
+    animation-delay: 0.5s;
+}
+[data-aos-delay="500"] {
+    animation-delay: 0.6s;
+}

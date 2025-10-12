@@ -1,0 +1,158 @@
+.jumbotron {
+    background-image: url("../images/jumbotron.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    position: relative;
+    min-height: 400px;
+}
+
+/* Dark overlay for better text visibility */
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+}
+
+.jumbotron-content {
+    position: relative;
+    z-index: 1;
+}
+
+.jumbotron h1 {
+    font-family: Georgia, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+    color: #f5e6d3;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron .btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-btn {
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+}
+
+iframe {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 400px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Adjust scroll position for fixed navbar */
+#contact {
+    scroll-margin-top: 90px;
+}
+
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Carousel image styling for smooth transitions */
+.carousel-product-image {
+    transition: transform 0.5s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(212, 175, 136, 0.9);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(212, 175, 136, 1);
+    transform: scale(1.1);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #D4AF88;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .jumbotron {
+        padding: 4rem 1rem;
+        min-height: 300px;
+    }
+
+    .jumbotron h1 {
+        font-size: 2.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.2rem;
+    }
+
+    .jumbotron .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .social-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    .col-md-6.position-relative .d-flex {
+        height: 350px !important;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 280px;
+        width: 280px;
+    }
+    
+    .testimonial-carousel {
+        animation: scroll 40s linear infinite;
+    }
+}
+
+
