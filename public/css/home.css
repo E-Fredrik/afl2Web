@@ -77,16 +77,6 @@ html {
 }
 
 
-.hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Carousel image styling for smooth transitions */
 .carousel-product-image {
     transition: transform 0.5s ease;
 }
