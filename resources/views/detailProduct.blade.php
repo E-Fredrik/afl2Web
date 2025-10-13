@@ -1,8 +1,10 @@
 @extends('layouts.layout')
 @section('title', $product['name'])
 @section('content')
+    <link rel = "stylesheet" href = "{{ asset('css/navigation.css') }}">
+    <div class="container my-5">
         <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb">
+        <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/" class="text-decoration-none" style="color: #D4AF88;">Home</a></li>
                 <li class="breadcrumb-item"><a href="/products" class="text-decoration-none" style="color: #D4AF88;">Products</a></li>
@@ -38,7 +40,7 @@
                 
                 <div class="mb-4">
                     <h2 class="text-primary" style="color: #D4AF88 !important;">
-                        Rp.{{ number_format($product['price'], 2) }}
+                        Rp {{ number_format($product['price'], 0, ',', '.') }}
                     </h2>
                 </div>
 
@@ -53,11 +55,13 @@
                 </div>
 
                 <div class="d-flex gap-3">
-                    <button class="btn btn-lg px-5" style="background-color: #D4AF88; color: white; border: none;">
-                        Order Now
-                    </button>
+                    <a href="https://wa.me/6281332227289?text=Hi!%20I'm%20interested%20in%20{{ urlencode($product['name']) }}"
+                       class="btn btn-lg px-5" 
+                       style="background-color: #D4AF88; color: white; border: none;">
+                        <i class="bi bi-whatsapp me-2"></i>Order Now
+                    </a>
                     <a href="/products" class="btn btn-outline-secondary btn-lg px-4">
-                        Back to Products
+                        <i class="bi bi-arrow-left me-2"></i>Back to Products
                     </a>
                 </div>
             </div>
@@ -68,13 +72,13 @@
             <div class="col-12">
                 <div class="card shadow-sm">
                     <div class="card-body" style="background-color: #F5E6D3;">
-                        <h5 class="card-title">Product Information</h5>
-                        <div class="row mt-3">
+                        <h5 class="card-title mb-4">Product Information</h5>
+                        <div class="row">
                             <div class="col-md-4">
                                 <p><strong>Product ID:</strong> #{{ str_pad($product['id'], 4, '0', STR_PAD_LEFT) }}</p>
                             </div>
                             <div class="col-md-4">
-                                <p><strong>Category:</strong> Milk Buns</p>
+                                <p><strong>Category:</strong> Baked Goods</p>
                             </div>
                             <div class="col-md-4">
                                 <p><strong>Availability:</strong> <span class="badge bg-success">In Stock</span></p>
