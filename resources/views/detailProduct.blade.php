@@ -80,9 +80,6 @@
                             <div class="col-md-4">
                                 <p><strong>Category:</strong> Baked Goods</p>
                             </div>
-                            <div class="col-md-4">
-                                <p><strong>Availability:</strong> <span class="badge bg-success">In Stock</span></p>
-                            </div>
                         </div>
                     </div>
                 </div>
